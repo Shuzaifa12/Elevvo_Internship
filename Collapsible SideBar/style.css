@@ -1,0 +1,141 @@
+/* Reset styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 220px;
+  background-color: #662525;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 20px 10px;
+  transition: transform 0.3s ease, width 0.3s ease;
+  z-index: 1000;
+}
+
+/* Toggle button inside sidebar */
+.toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Logo */
+.sidebar .logo {
+  padding: 4px;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  white-space: nowrap;
+}
+
+/* Navigation links */
+.sidebar .nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar .nav-links li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.sidebar .nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .nav-links img {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  filter: invert(1);
+}
+
+/* Collapsed sidebar on large screens */
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar.collapsed .logo,
+.sidebar.collapsed .nav-links span {
+  display: none;
+}
+
+.sidebar.collapsed .toggle-btn {
+  align-self: center;
+}
+
+/* Main content */
+.main-content {
+  margin-left: 220px;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Adjust content when collapsed */
+.sidebar.collapsed ~ .main-content {
+  margin-left: 60px;
+}
+
+/* Small screen styles */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  align-self: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+  .sidebar .logo,
+  .sidebar .nav-links span {
+    display: none;
+  }
+
+  .sidebar.expanded {
+    width: 220px;
+  }
+
+  .sidebar.expanded .logo,
+  .sidebar.expanded .nav-links span {
+    display: block;
+  }
+
+  .main-content {
+    margin-left: 60px;
+  }
+
+  .sidebar.expanded ~ .main-content {
+    margin-left: 220px;
+  }
+}
