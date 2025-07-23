@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero {
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  background: white;
+  color: #3b82f6;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.hero button:hover {
+  background: #e0e7ff;
+}
+
+.features, .testimonials, .pricing {
+  background: white;
+}
+
+.feature-cards, .testimonial-cards, .pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width:fit-content ;
+  /* margin-top: 30px; */
+  margin: 30px auto auto;
+}
+
+.card {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 10px;
+  /* width: 280px; */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+  text-wrap: wrap;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card i {
+  font-size: 2rem;
+  color: #4f46e5;
+  margin-bottom: 10px;
+}
+
+.testimonial-cards blockquote {
+  background: #eef2ff;
+  padding: 20px;
+  border-left: 5px solid #6366f1;
+  font-style: italic;
+  border-radius: 6px;
+  text-wrap: wrap;
+}
+
+.testimonial-cards span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.pricing-cards ul {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.pricing-cards ul li {
+  margin: 5px 0;
+}
+
+.pricing-cards button {
+  margin-top: 10px;
+  background: #4f46e5;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.footer {
+  background: #1f2937;
+  color: #d1d5db;
+  padding: 30px 20px;
+}
+
+.footer .social-icons {
+  margin: 10px 0;
+}
+
+.footer a {
+  color: #d1d5db;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .feature-cards,
+  .testimonial-cards,
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
